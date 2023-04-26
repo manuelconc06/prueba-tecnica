@@ -1,0 +1,165 @@
+.botonCrear{
+    background-color: #ffce39;
+    color: #1a73e8;
+}
+
+.boderMenu{
+    border: 1px solid #5a5d65;
+    box-shadow: 0px 0px 4px 0px;
+}
+
+.botonInicio{
+    color: #c7c713;
+}
+
+.card-img-top {
+   /* max-width: 137px; */
+   /* height: 103px;*/
+    width: 100%;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+.margin-card{
+    margin: 2px 2px 20px 2px;
+    border-radius: 5px;
+    /* width: 28%; */
+    
+}
+
+.precioActual{
+    font-weight: bold;
+    color: blue;
+    font-size: 19px;
+    text-align: right;
+    margin: 0px;
+}
+
+.precioAnterior{
+    font-size: 12px;
+    color: #827575;
+    font-weight: bold;
+    text-decoration: line-through;
+    text-align: end;
+    margin: 0px;
+}
+
+.btnLoQuiero{
+    width: 75px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #ffe034;
+    color: blue;
+}
+
+.borderCo{
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    border-radius: 16px;
+    border-color: #dcdcdc;
+    background-color: white;
+
+  }
+
+  .inputBorder{
+    border: none;
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .alinearText{
+    vertical-align: bottom;
+  }
+
+  .alinearIcon{
+    vertical-align: text-top;
+  }
+
+  .styleCategoria{
+    border-radius: 0px 22px 22px 0px;
+    min-width: 157px;
+    width: 100%;
+    min-height: 30px;
+    height: 100%;
+    font-size: 12px;
+  }
+
+  .buscadorMarg{
+    margin: 20px 0px 20px;
+  }
+
+  .cardMarcas{
+    color: blue;
+    font-weight: bold;
+    font-size: 14px;
+
+  }
+
+  .cardCatg{
+    margin: 10px 0px 10px 0px;
+  }
+
+  .ordenamiento{
+    color: #6c757d;
+    background: #eff1ff;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .orderPor{
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: #b7b7b7;
+    padding-top: 5px;
+  }
+
+  .btnCatg{
+    border: 1px solid #a6a3a3;
+    border-width: 1px;
+    text-align: center;
+  }
+
+  .borderRadDro{
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  .bordeRarOrd{
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .margCatg{
+    padding: 0px;
+    margin-top: 22px;
+  }
+
+  .estrellasOn{
+  color: #c7c713;
+  }
+  .estrellasOff{
+color: black;
+  }
+
+  .logo{
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  .margLogo{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .preStyle{
+    width: 40%;
+    margin: 10px;
+  }
+
