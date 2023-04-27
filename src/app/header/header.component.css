@@ -1,0 +1,24 @@
+.margLogo{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .logo{
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  .botonCrear{
+    background-color: #ffd300;
+    color: #0248ba;
+}
+
+
+.botonInicio{
+    color: #c7c713;
+    background: none;
+    border: none;
+}

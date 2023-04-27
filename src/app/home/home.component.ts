@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,13 @@ export class HomeComponent implements OnInit {
   searchValue = "";
   pre1 = "";
   pre2 = "";
+  nombreDetalle = "";
+  imagenDetalle = "";
+  precioActDetalle = "";
+  precioAntDetalle = "";
+  descripDetalle = "";
+  detalle = false;
+  home = true;
   esFavorito = false;
   estrellas =[
     {
@@ -47,7 +55,8 @@ export class HomeComponent implements OnInit {
       precioNuevo:"$3.99",
       precioAnterior:"$4.10",
       estrellas: 5,
-      descripcion:"Este telefono es muy bueno",
+      descripcion: "Este telefono es muy bueno",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Samsung",
@@ -61,6 +70,7 @@ export class HomeComponent implements OnInit {
       precioAnterior:"$7.10",
       estrellas: 5,
       descripcion:"Este telefono es muy bueno",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Xiaomi",
@@ -74,6 +84,7 @@ export class HomeComponent implements OnInit {
       precioAnterior:"$9.10",
       estrellas: 5,
       descripcion:"Este telefono es muy bueno",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Samsung",
@@ -87,6 +98,7 @@ export class HomeComponent implements OnInit {
       precioAnterior:"$9.99",
       estrellas: 5,
       descripcion:"Este telefono es muy bueno",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Xiaomi",
@@ -101,7 +113,8 @@ export class HomeComponent implements OnInit {
       precioNuevo:"$3.99",
       precioAnterior:"$4.10",
       estrellas: 5,
-      descripcion:"Este telefono es muy bueno",
+      descripcion:"Esta moto es muy buena",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Tx",
@@ -114,7 +127,8 @@ export class HomeComponent implements OnInit {
       precioNuevo:"$5.99",
       precioAnterior:"$7.10",
       estrellas: 5,
-      descripcion:"Este telefono es muy bueno",
+      descripcion:"Esta moto es muy buena",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "celular",
       marca:"Vera",
@@ -127,7 +141,8 @@ export class HomeComponent implements OnInit {
       precioNuevo:"$6.99",
       precioAnterior:"$9.10",
       estrellas: 5,
-      descripcion:"Este telefono es muy bueno",
+      descripcion:"Esta moto es muy buena",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "Motos",
       marca:"Vera",
@@ -140,7 +155,8 @@ export class HomeComponent implements OnInit {
       precioNuevo:"$6.99",
       precioAnterior:"$9.99",
       estrellas: 5,
-      descripcion:"Este telefono es muy bueno",
+      descripcion:"Esta moto es muy buen",
+      descripcionLarga:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
       loQuiero: false,
       categoria: "Motos",
       marca:"Tx",
@@ -239,7 +255,7 @@ export class HomeComponent implements OnInit {
    *
    * @returns NA
    */
-    constructor( ) {
+    constructor(private router: Router ) {
      
       }
 
@@ -247,6 +263,20 @@ export class HomeComponent implements OnInit {
         this.listaMostrar = this.listaProductos.concat(this.listaProductos2)
       }
 
+      irDetalle(item: any){
+      this.nombreDetalle = item.nombre
+      this.imagenDetalle = item.img
+      this.precioActDetalle = item.precioNuevo
+      this.precioAntDetalle = item.precioAnterior
+      this.descripDetalle = item.descripcionLarga
+        this.detalle = true;
+        this.home = false;
+      }
+
+      regresarHome(){
+        this.detalle = false;
+        this.home = true;
+      }
      
 
         selectCateg(item: any){
@@ -291,6 +321,7 @@ export class HomeComponent implements OnInit {
             precioAnterior: list.precioAnterior,
             estrellas: list.estrellas,
             descripcion: list.descripcion,
+            descripcionLarga: list.descripcionLarga,
             loQuiero: list.loQuiero,
             categoria: list.categoria,
             marca: list.marca,
@@ -327,7 +358,8 @@ export class HomeComponent implements OnInit {
             precioNuevo: list.precioNuevo,
             precioAnterior: list.precioAnterior,
             estrellas: list.estrellas,
-            descripcion: list.estrellas,
+            descripcion: list.descripcion,
+            descripcionLarga: list.descripcionLarga,
             loQuiero: list.loQuiero,
             categoria: list.categoria,
             marca: list.marca,
